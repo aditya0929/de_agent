@@ -1,0 +1,36 @@
+# Install dependencies with:
+# pip install -r requirements.txt
+
+httpx>=0.27.0
+openpyxl>=3.1.0
+
+# Synthetic Input-Sheet generator (LangGraph multi-agent + evidence loop)
+openai>=1.40.0
+langgraph>=0.2.0
+langchain-core>=0.3.0
+psycopg[binary]>=3.1.0
+python-dotenv>=1.0.0
+
+# Semantic DB report search (local embeddings, no external API)
+sentence-transformers>=2.7.0
+pgvector>=0.3.0
+
+# Dev/test only
+pytest>=8.0.0
+
+# Next.js frontend backend API
+fastapi>=0.110.0
+uvicorn[standard]>=0.29.0
+sse-starlette>=2.0.0
+
+# Supply-side: real company revenue data + real multi-backend web search
+# (replaces LLM-guessed revenue and the broken single-backend DDG scraper)
+yfinance>=0.2.40
+ddgs>=9.0.0
+
+# Demand-Side: general-purpose evidence acquisition (PDF/CSV/XLSX/API, not
+# just web-search snippets) -- pandas/openpyxl/requests/bs4/lxml already
+# required above/elsewhere; pdfplumber is the only new dependency.
+pdfplumber>=0.11.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0

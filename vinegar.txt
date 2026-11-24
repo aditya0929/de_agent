@@ -1,0 +1,42 @@
+
+I want an update on demand analysis as explained to Rajiv and Vimarsh and Aditya. As we are running at a very critical time, I want an update on all three approaches and where we are, with five examples from altogether different industry verticals. 
+
+As explained repetitively, market estimates and forecasting are done by three approaches:
+
+1. *The desk research approach*
+
+In this approach - where you try to find all the information available and quoted by third-party players or competitors of ours, or the association, which has also calculated the market size and shared the details of market size (not on just a surface level but also by segments, applications, and the other different taxonomy that is being covered as a part of that study).
+ 
+2. *Demand-side approach -*
+
+There are three deep-dive analyses that could be done to crack the demand side.
+
+A) Track the demand of the particular market at a country level, bottom up to the global, and then do an entire top-down analysis for all the sub-segments (segmentation) which are part of the market analysis.
+
+B) track the demand at a country level. When we track the demand at a country level, we track the demand across each end-use application or each application covered as a part of the taxonomy at each country level. Once that is estimated, you bottom up that to get the estimates of that market at a country level and then this is further bottom up from all countries to get the estimates at the global level. For other segments, other segmentation, or other taxonomy, a top-down approach is followed to get the market for them. 
+
+C) in this approach we go on a deeper dive. We track the market at the country level. At the country level we track the market at each end-use application or each application. What differs this approach from Approach B is that within each application we also try to track the demand for each product type that is part of that market taxonomy. Thus, once we get the market size for each product type across each application, that is further bottom-up to reach the market size for the entire set of applications within that one country. That is then further bottom-up to reach the global level. For the rest of the segments a top-down approach is followed. 
+
+3. *Supply-side approach*
+
+In this approach we analyse all the vendors who are contributing to the industry, not across the value chain, but directly acting as a revenue contributor, which defines this industry.
+1. We analyse them.
+2. We try to get their total revenues.
+3. We try to understand the part of the revenues that would be limited specifically to the market that we define.
+
+For example if you are tracking the _cloud API market_, Google is a player in the cloud API market. We won't consider the entire revenue of Google. We'll only consider the revenue of Google that contributes to their cloud API business. Maybe 10% of their entire business goes into cloud API so 10% of Google's revenues would be considered here.
+
+Similarly for all the players that have been mapped, the revenue contribution of those players would be tracked as a part of it and would be added to it. This approach helps us to understand the market, at least on the total size, that is, the total market size, which could be fairly accurate. This approach also gives us an understanding of company market share analysis, helping us understand which company has how much of the market share in a particular industry.
+
+
+
+
+How your senior's pipeline actually runs (run_market_e2e.py)
+
+1. Structure agent   → copies the layout of the analyst's Data/ME files (labels only, no numbers)
+2. Desk generation   → generate_synthetic_input.py creates the Input Sheet from evidence
+3. Data writer       → moves those numbers into the analyst's Data-file layout
+4a. Assumptor   (--regulate)   ← "numbers from different sources"
+4b. Bottom-up   (--usecases)   ← "cell-wise units bottom-up", the half-built part
+4c. Events      (--events)     → adjusts growth rates (CAGRs) using dated news
+5. Stage B → ME workbook, then the evaluator compares the result with the analyst's files

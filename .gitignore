@@ -1,0 +1,61 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# Outputs & caches
+output/
+*.tmp
+.cache/
+
+# Claude Code internals
+.claude/
+
+# Generated output workbooks only
+output/*.xlsx
+my_outputs/
+agentGeneratedInputSheet/*.xlsx
+agentGeneratedMEWorkbook/
+
+# Log files (dev server output)
+*.log
+
+# Local environment files
+.env
+.env.*
+.venv/
+venv/
+
+# Editor and OS
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Office temp/lock files
+~$*
+*.tmp
+# Added by code-review-graph
+.code-review-graph/
+
+# Downloaded official statistics (FAOSTAT bulk files)
+data/official/
+src/data/official/
+
+# Third-party browser extensions (nested repo, large binaries)
+src/me_engine/demandCountry_approach2A/chrome-scraper-extensions/
+
+# Demo app builds: keep only the latest
+demo/high-energy-laser-*/
+!demo/high-energy-laser-v17/
+
+# Headless browser profiles used for screenshots
+demo/.chrome-profile/
+
+# generated whitepaper JSON folders (kept in gs://tinysql-whitepapers/final/)
+whitepaper_jsons_completed/
+whitepaper_jsons_drafts/
